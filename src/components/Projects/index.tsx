@@ -27,14 +27,14 @@ export default function Projects() {
     return (
         <section
             id="projects"
-            className="w-full h-full flex justify-center items-center flex-col"
+            className="w-full  py-20 h-full flex justify-center items-center flex-col"
             aria-label="Alguns dos meus projetos"
         >
-            <h2 className="text-4xl font-bold max-sm:text-2xl">
-                Alguns dos meus projetos
+            <h2 className="text-4xl font-bold max-sm:text-2xl mb-20">
+                Projetos
             </h2>
             {dataProjects.map((project) => (
-                <div className="my-30 max-lg:mt-20">
+                <div className="mb-40 max-lg:mb-20">
                     <Card
                         direction={project.id === 2 ? "left" : ""}
                         project={project}

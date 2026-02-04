@@ -3,6 +3,11 @@ import { experienceList } from "./experienceList";
 import { cn } from "../../utils/cn";
 import { Dot } from "lucide-react";
 
+interface CollaborationItem {
+    label: string;
+    description: string;
+}
+
 interface ExperienceItem {
     id: number;
     title: string;
@@ -10,7 +15,7 @@ interface ExperienceItem {
     enterprise: string;
     time: string;
     link: string;
-    collaboration: string[];
+    collaboration: CollaborationItem[];
 }
 
 export default function Experience() {
@@ -20,10 +25,10 @@ export default function Experience() {
     return (
         <section
             id="experience"
-            className="h-[80vh] flex justify-center items-center flex-col max-sm:mb-12"
+            className=" py-20 flex  items-center flex-col max-sm:mb-12"
             aria-label="Experiências profissionais"
         >
-            <h2 className="text-4xl font-medium mb-12">Onde eu trabalhei</h2>
+            <h2 className="text-4xl font-medium mb-12">Experiência</h2>
             <div className="flex justify-center md:gap-6 max-md:flex-col max-md:items-center ">
                 <div
                     className="flex flex-col max-md:flex-row"
@@ -55,7 +60,7 @@ export default function Experience() {
                     id={`panel-${selectedExperience.id}`}
                     tabIndex={0}
                 >
-                    <div className="inline-flex space-x-2 mt-4">
+                    <div className="inline-flex space-x-2 ">
                         <h3 className="font-bold text-xl max-sm:text-base">
                             {selectedExperience.position}
                         </h3>
@@ -68,20 +73,21 @@ export default function Experience() {
                         </a>
                     </div>
                     <div>
-                        <p className="opacity-80 mb-6 text-left max-md:text-center max-md:text-sm">
+                        <p className="opacity-80  text-left max-md:text-center max-md:text-sm">
                             {selectedExperience.time}
                         </p>
                     </div>
                     {selectedExperience.collaboration.map((list, index) => (
                         <div
                             key={index}
-                            className="flex items-center max-md:justify-center gap-4 max-md:gap-0 py-2"
+                            className="flex items-center max-md:justify-center gap-2 max-md:gap-0  mt-2"
                         >
                             <div className="">
                                 <Dot size={32} />
                             </div>
                             <p className="opacity-80 w-[80vw] md:w-[60vw] max-md:text-left">
-                                {list}
+                                <b>{list.label}</b>
+                                {list.description}
                             </p>
                         </div>
                     ))}
