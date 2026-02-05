@@ -3,12 +3,11 @@ import Card from "./components/ProjectCard";
 
 interface projetoDataType {
     id: number;
-    desktop: string;
-    mobile: string;
+    images: Array<string>;
     title: string;
-    techs: Array<string>;
+    technologies: Array<string>;
     description: string;
-    link: string;
+    liveDemo: string;
     github: string;
 }
 
@@ -19,7 +18,7 @@ export default function Projects() {
         fetch("https://backend-portfolio-one.vercel.app/projects")
             .then((response) => response.json())
             .then((data) => {
-                setDataProjects(data);
+                setDataProjects(data.projects);
             })
             .catch((error) => console.error(error));
     }, []);
