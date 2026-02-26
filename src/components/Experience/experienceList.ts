@@ -4,7 +4,7 @@ export const experienceList = [
         title: "Atos Capital",
         position: "Desenvolvedor Full-Stack",
         enterprise: "Atos Capital",
-        time: "Abril 2025 - Presente",
+        time: "Abril 2025 - Fevereiro 2026",
         link: "https://site.atoscapital.com.br/",
         collaboration: [
             {

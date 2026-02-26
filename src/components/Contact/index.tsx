@@ -9,9 +9,7 @@ export default function Contact() {
             id="contact"
         >
             <ToastContainer position="top-right" autoClose={3000} />
-            <h2 className="text-4xl font-medium max-sm:text-3xl">
-                Entre em contato comigo
-            </h2>
+            <h2 className="text-4xl font-medium max-sm:text-3xl">Entre em contato comigo</h2>
             <p className="mb-6 text-xl opacity-80 max-sm:max-w-[250px] max-sm:text-center">
                 Minhas caixa de entrada está sempre disponivel
             </p>
@@ -34,25 +32,20 @@ export default function Contact() {
                     >
                         <Linkedin size={32} />
                         <div className="flex flex-col">
-                            Linkedin{" "}
-                            <label className="text-xs">
-                                /david-fontes-9b84a4201
-                            </label>
+                            Linkedin <label className="text-xs">/david-fontes-9b84a4201</label>
                         </div>
                     </a>
                 </div>
                 <div className="flex gap-4 max-sm:flex-col">
                     <a
-                        href="/DavidFontes-cv.pdf"
+                        href="/DavidFontes-CV-Full-Stack.pdf"
                         target="_blank"
-                        className="p-4 border text-xl w-[220px] inline-flex items-center gap-2 hover:text-blue transition-all hover:scale-[1.1]"
+                        className="p-4 border text-xl w-[255px] inline-flex items-center gap-2 hover:text-blue transition-all hover:scale-[1.1]"
                     >
                         <FileUser size={32} />
                         <div className="flex flex-col ">
                             Curriculo
-                            <label className="text-xs">
-                                DavidFontes-cv.pdf
-                            </label>
+                            <label className="text-xs">DavidFontes-CV-Full-Stack.pdf</label>
                         </div>
                     </a>
                     <a
@@ -61,10 +54,7 @@ export default function Contact() {
                     >
                         <Mail size={32} />
                         <div className="flex flex-col">
-                            Email{" "}
-                            <label className="text-xs">
-                                davidfontes303@gmail.com
-                            </label>
+                            Email <label className="text-xs">davidfontes303@gmail.com</label>
                         </div>
                     </a>
                     <a
@@ -73,8 +63,7 @@ export default function Contact() {
                     >
                         <Phone size={32} />
                         <div className="flex flex-col">
-                            Telefone{" "}
-                            <label className="text-xs">(79) 9 9963-4862</label>
+                            Telefone <label className="text-xs">(79) 9 9963-4862</label>
                         </div>
                     </a>
                 </div>

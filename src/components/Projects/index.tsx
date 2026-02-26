@@ -26,10 +26,10 @@ export default function Projects() {
     return (
         <section
             id="projects"
-            className="w-full  py-20 h-full flex justify-center items-center flex-col"
+            className="w-full py-20 h-full flex justify-center items-center flex-col"
             aria-label="Alguns dos meus projetos"
         >
-            <h2 className="text-4xl font-bold max-sm:text-2xl mb-20">
+            <h2 className="text-4xl font-bold max-sm:text-2xl mb-8">
                 Projetos
             </h2>
             {dataProjects.map((project) => (

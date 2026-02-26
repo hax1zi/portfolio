@@ -25,10 +25,10 @@ export default function Experience() {
     return (
         <section
             id="experience"
-            className=" py-20 flex  items-center flex-col max-sm:mb-12"
+            className=" py-20 flex items-center flex-col max-sm:mb-12"
             aria-label="Experiências profissionais"
         >
-            <h2 className="text-4xl font-medium mb-12">Experiência</h2>
+            <h2 className="text-4xl font-medium mb-8">Experiência</h2>
             <div className="flex justify-center md:gap-6 max-md:flex-col max-md:items-center ">
                 <div
                     className="flex flex-col max-md:flex-row"
