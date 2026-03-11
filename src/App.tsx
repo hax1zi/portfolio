@@ -1,32 +1,25 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDarkTheme } from "./store/useDarkTema";
-import LeadingPage from "./pages/LeadingPage";
 import Header from "./components/Header";
-import Introduction from "./pages/Introduction";
 import HeaderMobile from "./components/HeaderMobile";
+import LeadingPage from "./pages/LeadingPage";
+import Cover from "./pages/Cover/Cover";
+
 function App() {
-  const { darkTheme } = useDarkTheme();
+    const { darkTheme } = useDarkTheme();
 
-  useEffect(() => {
-    const root = document.documentElement;
-    root.classList.toggle("dark", darkTheme === null ? false : darkTheme);
-  }, [darkTheme]);
+    useEffect(() => {
+        const root = document.documentElement;
+        root.classList.toggle("dark", darkTheme === null ? false : darkTheme);
+    }, [darkTheme]);
 
-  const [hasStarted, setHasStarted] = useState<boolean>(false);
-
-
-  return (
-    <>
-      <Introduction setStart={setHasStarted} />
-      {hasStarted && (
-        <>
-          <Header />
-          <HeaderMobile />
-          <LeadingPage />
-        </>
-      )}
-    </>
-  );
+    return (
+        <Cover>
+            <Header />
+            <HeaderMobile />
+            <LeadingPage />
+        </Cover>
+    );
 }
 
 export default App;

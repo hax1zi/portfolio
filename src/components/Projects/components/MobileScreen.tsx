@@ -18,7 +18,7 @@ export default function MobileScreen({ image, direction }: MobileScreenProps) {
             aria-label="Projeto na tela de smartphone"
         >
             <div className="border-4 rounded-md shadow-xl">
-                <img src={image} width={120} />
+                <img src={image} alt="imagem mobile do projeto" width={120} />
             </div>
         </div>
     );

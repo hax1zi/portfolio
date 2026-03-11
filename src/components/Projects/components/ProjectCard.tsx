@@ -27,7 +27,7 @@ export default function ProjectCard({ project, direction }: ProjectCardProps) {
         >
             <div className="relative">
                 <div className="w-[400px] h-[300px] overflow-hidden max-sm:w-[350px] max-sm:h-[250px]">
-                    <img src={project.images[0]} className="w-full h-full object-cover" />
+                    <img alt={`Imagem do projeto: ${project.title}`} src={project.images[0]} className="w-full h-full object-cover" />
                 </div>
                 <MobileScreen direction={direction} image={project.images[1]} />
             </div>
